@@ -1,0 +1,48 @@
+html {
+    font-size: 62.5%; /*Reset para REMS - 62.5% = 10px de 16px | 1 rem = 10px  */
+    box-sizing: border-box; /*Aplicar correctamente box-sizing*/
+}
+*, *:before, *:after { /*Aplicar correctamente box-sizing*/
+    box-sizing: inherit; /*Aplicar correctamente box-sizing*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /*Establecimos el tipo de fuente para todo el documento*/
+    font-size: 1.6rem; /*Para establecer un tamaño estandar a todo el font-size del documento;*/
+    line-height: 2; /*Para establecer el interlineado*/
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- Globales -!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+img {
+    max-width: 100%; /* Para ajustar las imagenes al contenedor padre*/
+}
+
+/*---------------utilidades-----------------*/
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+
+/*---------Medidas estandar para titulos-----------*/
+h1, h2, h3, h4 { /*Establecemos la fuente de los encabezados*/
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+    
+}
+h4 {
+    font-size: 2.8rem;
+}
