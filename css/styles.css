@@ -21,6 +21,7 @@ img {
 /*---------------utilidades-----------------*/
 .contenedor {
     max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
 }
 .centrar-texto {
@@ -59,7 +60,7 @@ h4 {
     background-size: cover;
     height: 60rem;
 }
-@media (min-width:769px) { /*---------------mobile-first: 769-----------------*/
+@media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .barra {
         display: flex;
         justify-content: space-between;
@@ -84,7 +85,7 @@ h4 {
     display: block;
     font-size: 1.8rem;
 }
-@media (min-width:769px) { /*---------------mobile-first: 769-----------------*/
+@media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .navegacion a {
         display: inline;
         margin-right: 2rem;
@@ -100,7 +101,7 @@ h4 {
     text-align: center;
     margin-top: 5rem;
 }
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .texto-header {
         margin-top: 15rem;
     }
@@ -108,4 +109,30 @@ h4 {
 .texto-header p {
     font-size: 2.2rem;
 }
+
+/*------------------------------------------------ Contenido Principal ------------------------------------------------*/
+.contenido-principal {
+    display: flex;
+    flex-direction: column-reverse;
+}
+@media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
+    .contenido-principal {
+        flex-direction: row;
+        /*para agregar separacion a los elementos*/
+        justify-content: space-between;
+    }
+    .blog {
+        /*para agregar separacion a los elementos*/
+        flex-basis: calc(70% - 2rem); 
+    }
+    .cursos {
+        /*para agregar separacion a los elementos*/
+        flex-basis: calc(30% - 2rem);
+    }
+}
+
+
+
+
+
 
