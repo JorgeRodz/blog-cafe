@@ -50,9 +50,37 @@ h4 {
     font-size: 2.8rem;
 }
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- index.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*------------- Enlaces tipo boton -----------------*/
+a.btn {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem 3rem;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'PT sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 5px;
+}
+a.btn-primario {
+    background-color: #000000;
+}
+a.btn-secundario {
+    background-color: #784d3c;
+}
+@media (min-width:769px) {
+    a.btn {
+        display: inline-block;
+    }
+    a.btn:hover {
+        cursor: pointer;
+    }
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!- index.html - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
-/*------------------------------------------------- Header ----------------------------------------------------*/
+/*------------------------------------------------- Header --------------------------------------------------------*/
 .site-header {
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
@@ -126,13 +154,47 @@ h4 {
         flex-basis: calc(70% - 2rem); 
     }
     .cursos {
+        line-height: 1.2; 
         /*para agregar separacion a los elementos*/
         flex-basis: calc(30% - 2rem);
     }
 }
 
+/*------------- Blog -----------------*/
+article.entrada-blog:not(:last-of-type) { /*Utilizamos la pseudo clase :not(:last-of-type) para que estos estilos no se apliquen al ultimo article*/
+    margin-bottom: 3rem;
+    border-bottom: 3px solid #e1e1e1;
+}
+.contenido-blog h3 {
+    margin: 0;
+}
+
+/*------------- Cursos Sidebar -----------------*/
+aside.cursos h2 {
+    font-size: 3rem;
+    margin: 5rem 0;
+}
+ul.cursos-lista {
+    padding: 0;
+    list-style: none;
+}
+li.curso h4 {
+    font-size: 2.6rem;
+}
+li.curso:not(:last-of-type) {
+    padding-bottom: 3rem;
+    border-bottom: 3px solid #e1e1e1;
+}
+li.curso p {
+    font-family: 'PT sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+li.curso p span {
+    font-weight: 400;
+}
 
 
-
+/*------------------------------------------------- Footer ------------------------------------------------------------*/
 
 
