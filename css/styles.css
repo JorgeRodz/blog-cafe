@@ -34,6 +34,28 @@ img {
     color: #c58d77;
 }
 
+/*grid*/
+@media (min-width:769px) {
+    .grid {
+        display: flex;
+        justify-content: space-between;
+    }
+    .columnas-6 {
+        flex-basis: calc(50% - 1rem);
+    }
+    .columnas-6:first-of-type { /*para que se muestre la imagen correctamente*/
+        display: flex;
+    }
+    .columnas-6:first-of-type img { /*para que la imagen se muestre correctamente*/
+        object-fit: cover; 
+    }
+    .columnas-6 p:first-child {
+        margin-top: 0;
+    }
+}
+
+
+
 /*---------Medidas estandar para titulos-----------*/
 h1, h2, h3, h4 { /*Establecemos la fuente de los encabezados*/
     font-family: 'PT Sans', sans-serif;
