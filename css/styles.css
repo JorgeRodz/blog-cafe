@@ -30,6 +30,9 @@ img {
 .no-margin {
     margin: 0;
 }
+.on-hover:hover {
+    color: #c58d77;
+}
 
 /*---------Medidas estandar para titulos-----------*/
 h1, h2, h3, h4 { /*Establecemos la fuente de los encabezados*/
@@ -59,10 +62,13 @@ a.btn {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'PT sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     border-radius: 5px;
+}
+a.btn:hover {
+    opacity: 0.8;
 }
 a.btn-primario {
     background-color: #000000;
@@ -109,9 +115,12 @@ a.btn-secundario {
 
 /*--------------- navegacion-----------------*/
 .navegacion a {
+    color: #ffffff;
+    text-decoration: none;
     text-align: center;
     display: block;
     font-size: 1.8rem;
+    font-weight: 900;
 }
 @media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .navegacion a {
@@ -186,7 +195,7 @@ li.curso:not(:last-of-type) {
     border-bottom: 3px solid #e1e1e1;
 }
 li.curso p {
-    font-family: 'PT sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 2rem;
 }
@@ -196,5 +205,19 @@ li.curso p span {
 
 
 /*------------------------------------------------- Footer ------------------------------------------------------------*/
-
+footer.site-footer {
+    background-color: #000000;
+    padding: 3em;
+    margin-top: 7rem;
+}
+footer.site-footer p {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+}
+footer.site-footer p span {
+    font-weight: 700;
+}
 
