@@ -30,27 +30,39 @@ img {
 .no-margin {
     margin: 0;
 }
+.mt-0 {
+    margin-top: 0;
+}
 .on-hover:hover {
     color: #c58d77;
 }
+.fw-400 {
+    font-weight: 400;
+}
 
 /*grid*/
-@media (min-width:769px) {
+@media (min-width:769px) {  /*---------------mobile-first: 769px-----------------*/
     .grid {
         display: flex;
         justify-content: space-between;
     }
+    /*sistema de 12 columnas*/
+    .columnas-4 {
+        flex-basis: calc(33.3% - 1rem);
+    }
     .columnas-6 {
         flex-basis: calc(50% - 1rem);
     }
-    .columnas-6:first-of-type { /*para que se muestre la imagen correctamente*/
+    .columnas-8 {
+        flex-basis: calc(66.6% - 1rem);
+    }
+
+    /*Para que las images se acoplen al div*/
+    .img-container { /*para que se muestre la imagen correctamente*/
         display: flex;
     }
-    .columnas-6:first-of-type img { /*para que la imagen se muestre correctamente*/
+    .img-container img { /*para que la imagen se muestre correctamente*/
         object-fit: cover; 
-    }
-    .columnas-6 p:first-child {
-        margin-top: 0;
     }
 }
 
@@ -98,7 +110,7 @@ a.btn-primario {
 a.btn-secundario {
     background-color: #784d3c;
 }
-@media (min-width:769px) {
+@media (min-width:769px) {  /*---------------mobile-first: 769px-----------------*/
     a.btn {
         display: inline-block;
     }
@@ -116,11 +128,15 @@ a.btn-secundario {
     background-size: cover;
     height: 60rem;
 }
+.barra {
+    padding-top: 2rem;
+}
 @media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .barra {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0;
     }
 }
 .site-header a {
@@ -143,11 +159,13 @@ a.btn-secundario {
     display: block;
     font-size: 1.8rem;
     font-weight: 900;
+    padding-top: 2rem;
 }
 @media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .navegacion a {
         display: inline;
         margin-right: 2rem;
+        padding: 0;
     }
     .navegacion a:last-of-type {
         margin-right: 0;
@@ -159,10 +177,14 @@ a.btn-secundario {
     color: #ffffff;
     text-align: center;
     margin-top: 5rem;
+    line-height: 1.2;
+}
+.texto-header h2 {
+    margin-bottom: 2rem;
 }
 @media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .texto-header {
-        margin-top: 15rem;
+        margin-top: 19rem;
     }
 }
 .texto-header p {
@@ -192,7 +214,7 @@ a.btn-secundario {
 }
 
 /*------------- Blog -----------------*/
-article.entrada-blog:not(:last-of-type) { /*Utilizamos la pseudo clase :not(:last-of-type) para que estos estilos no se apliquen al ultimo article*/
+.entrada-blog:not(:last-of-type) { /*Utilizamos la pseudo clase :not(:last-of-type) para que estos estilos no se apliquen al ultimo article*/
     margin-bottom: 3rem;
     border-bottom: 3px solid #e1e1e1;
 }
@@ -201,45 +223,49 @@ article.entrada-blog:not(:last-of-type) { /*Utilizamos la pseudo clase :not(:las
 }
 
 /*------------- Cursos Sidebar -----------------*/
-aside.cursos h2 {
+.cursos h2 {
     font-size: 3rem;
     margin: 5rem 0;
 }
-ul.cursos-lista {
+.cursos-lista {
     padding: 0;
     list-style: none;
 }
-li.curso h4 {
+.curso h4 {
     font-size: 2.6rem;
 }
-li.curso:not(:last-of-type) {
+main .curso { /*se aplica en el cursos.html*/
+    padding-top: 3rem;
+}
+.curso:not(:last-of-type) {
     padding-bottom: 3rem;
     border-bottom: 3px solid #e1e1e1;
 }
-li.curso p {
+.curso p {
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 2rem;
 }
-li.curso p span {
+.curso p span,
+.curso p.descripcion {
     font-weight: 400;
 }
 
 
 /*------------------------------------------------- Footer ------------------------------------------------------------*/
-footer.site-footer {
+.site-footer {
     background-color: #000000;
     padding: 3em;
     margin-top: 7rem;
 }
-footer.site-footer p {
+.site-footer p {
     text-align: center;
     color: #ffffff;
     font-family: 'PT Sans', sans-serif;
     font-size: 4rem;
     font-weight: 400;
 }
-footer.site-footer p span {
+.site-footer p span {
     font-weight: 700;
 }
 
