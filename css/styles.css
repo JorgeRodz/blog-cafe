@@ -279,7 +279,7 @@ main .curso { /*se aplica en el cursos.html*/
 .site-footer .barra .navegacion {
     padding-bottom: 2rem;
 }
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .site-footer {
         padding: 3rem;
     }
@@ -305,12 +305,12 @@ main .curso { /*se aplica en el cursos.html*/
     background-color: #ffffff;
     padding: 5rem;
 }
-@media (min-width:769px) {
+@media (min-width:769px) { /*---------------mobile-first: 769px-----------------*/
     .formulario-contacto {
-        margin-top: -10rem;
+        margin-top: -10rem; /*para que el formulario se superponga a la imagen*/
     }
 }
-.formulario-contacto .campo {
+.formulario-contacto .campo {  
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
@@ -320,7 +320,7 @@ main .curso { /*se aplica en el cursos.html*/
 }
 .formulario-contacto .campo input:not([type="submit"]),
 .formulario-contacto textarea {
-    flex-grow: 1;
+    flex-grow: 1; /*para que los input y text area abarque todo el espacio restante*/
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     padding: 1rem;
@@ -334,5 +334,5 @@ main .curso { /*se aplica en el cursos.html*/
     height: 20rem;
 }
 .formulario-contacto .campo.enviar {
-    justify-content: flex-end;
+    justify-content: flex-end; /*acomodamos el boton al final*/
 }
